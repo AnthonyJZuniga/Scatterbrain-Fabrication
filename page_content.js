@@ -16,26 +16,24 @@ $("#projects").click(function(){
 
 function print_page()
 {
+  $("#navbarNavDropdown").collapse('hide');
+  $("nav").find(".active").removeClass("active");
   switch(localStorage['current_page'])
   {
       case "Blog":
         print_blog();
-        $("nav").find(".active").removeClass("active");
         $("#blog").addClass("active");
       break;
       case "About":
         print_about();
-        $("nav").find(".active").removeClass("active");
         $("#about").addClass("active");
       break;
       case "Projects":
         print_projects();
-        $("nav").find(".active").removeClass("active");
         $("#projects").addClass("active");
       break;
       default:
         localStorage['current_page']="Blog";
-        $("nav").find(".active").removeClass("active");
         $("#blog").addClass("active");
         print_blog();
   }
@@ -44,11 +42,11 @@ function print_page()
 function print_blog()
 {
   $(function() {
-    $("header").html(`
+    $("header").hide().html(`
       <h1 class="row justify-content-center">Blog</h1>
       <hr/>
-      `);
-    $("#content").html(`
+      `).fadeIn();
+    $("#content").hide().html(`
       <div class="card bg-secondary text-white">
         <div class="card-header">
           <h5 class="card-title">New Site!!!</h5>
@@ -62,18 +60,18 @@ function print_blog()
           Posted 4-11-2021
         </div>
       </div>
-    `);
+    `).fadeIn();
   });
 }
 
 function print_about()
 {
   $(function() {
-    $("header").html(`
+    $("header").hide().html(`
       <h1 class="row justify-content-center">About</h1>
       <hr/>
-    `);
-    $("#content").html(`
+    `).fadeIn();
+    $("#content").hide().html(`
       <div class="card bg-secondary text-white">
         <div class="card-body">
           <p class="card-text">Scatterbrain Fabrication was founded in order to give a crazy nerd an outlet for his creativity. Still in its infancy, it aims to output content and creations that are both entertaining and beautiful. We specialize in prototyping products and creating cosplay weapons, armor, and the like. Hopefully this becomes more than just a webpage and YouTube channel. We aim to expand our viewers knowledge and hopefully give them a few laughs along the way. Like and subscribe to our channel!</p>
@@ -85,23 +83,23 @@ function print_about()
           </div>
         </div>
       </div>
-    `);
+    `).fadeIn();
   });
 }
 
 function print_projects()
 {
   $(function() {
-    $("header").html(`
+    $("header").hide().html(`
       <h1 class="row justify-content-center">Projects</h1>
       <hr/>
-    `);
-    $("#content").html(`
+    `).fadeIn();
+    $("#content").hide().html(`
       <div class="card bg-secondary text-white">
         <div class="card-body">
           <p class="card-text">Coming Soon</p>
         </div>
       </div>
-    `);
+    `).fadeIn();
   });
 }
