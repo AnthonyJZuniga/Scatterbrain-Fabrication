@@ -18,6 +18,11 @@ function print_page()
 {
   $("#navbarNavDropdown").collapse('hide');
   $("nav").find(".active").removeClass("active");
+  $("#content_header").hide().html(`
+    <div class="jumbotron bg-dark text-white" style="opacity:90%">
+        <h1 class="row justify-content-center">`+localStorage['current_page']+`</h1>
+    </div>
+  `).fadeIn();
   switch(localStorage['current_page'])
   {
       case "Blog":
@@ -42,10 +47,6 @@ function print_page()
 function print_blog()
 {
   $(function() {
-    $("header").hide().html(`
-      <h1 class="row justify-content-center">Blog</h1>
-      <hr/>
-      `).fadeIn();
     $("#content").hide().html(`
       <div class="card bg-secondary text-white">
         <div class="card-header">
@@ -67,10 +68,6 @@ function print_blog()
 function print_about()
 {
   $(function() {
-    $("header").hide().html(`
-      <h1 class="row justify-content-center">About</h1>
-      <hr/>
-    `).fadeIn();
     $("#content").hide().html(`
       <div class="card bg-secondary text-white">
         <div class="card-body">
@@ -90,10 +87,6 @@ function print_about()
 function print_projects()
 {
   $(function() {
-    $("header").hide().html(`
-      <h1 class="row justify-content-center">Projects</h1>
-      <hr/>
-    `).fadeIn();
     $("#content").hide().html(`
       <div class="card bg-secondary text-white">
         <div class="card-body">
