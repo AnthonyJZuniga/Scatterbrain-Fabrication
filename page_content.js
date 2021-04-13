@@ -71,7 +71,7 @@ function print_about()
     $("#content").hide().html(`
       <div class="card bg-secondary text-white">
         <div class="card-body">
-          <p class="card-text">Scatterbrain Fabrication was founded in order to give a crazy nerd an outlet for his creativity. Still in its infancy, it aims to output content and creations that are both entertaining and beautiful. We specialize in prototyping products and creating cosplay weapons, armor, and the like. Hopefully this becomes more than just a webpage and YouTube channel. We aim to expand our viewers knowledge and hopefully give them a few laughs along the way. Like and subscribe to our channel!</p>
+          <p class="card-text">Scatterbrain Fabrication was founded in order to give a crazy nerd an outlet for his creativity. Still in its infancy, it aims to output content and creations that are both entertaining and beautiful. We specialize in prototyping products and creating cosplay weapons, armor, and the like. Hopefully this becomes more than just a webpage and YouTube channel. We aim to expand our viewers' knowledge and hopefully give them a few laughs along the way. Like and subscribe to our channel!</p>
         </div>
         <div class="card-footer">
           <div class="row justify-content-around">
